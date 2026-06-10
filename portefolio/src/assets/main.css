@@ -1,21 +1,22 @@
 @font-face {
-    font-family: 'Iosevka Charon';
-    src: url('./font/Iosevka_Charon/IosevkaCharon-Regular.ttf');
+    font-family: 'Mina';
+    src: url('./font/Mina-Regular.ttf');
     font-weight: 400;
 }
 
 @font-face {
-    font-family: 'Iosevka Charon';
-    src: url('./font/Iosevka_Charon/IosevkaCharon-Bold.ttf');
+    font-family: 'Mina';
     font-weight: 700;
+    src: url('./font/Mina-Bold.ttf');
 }
 
-@font-face {
-    font-family: 'Iosevka Charon';
-    src: url('./font/Iosevka_Charon/IosevkaCharon-Light.ttf');
-    font-weight: 300;
-}
+
 *{
-    font-family: 'Ioveska Charon';
+    font-family: 'Mina';
     font-weight: 400;
+    margin: 0;
+}
+h1, h2, h3{
+    font-family: 'Mina';
+    font-weight: 700;
 }
