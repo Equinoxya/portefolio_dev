@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Iosevka Charon';
+    src: url('./font/Iosevka_Charon/IosevkaCharon-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Iosevka Charon';
+    src: url('./font/Iosevka_Charon/IosevkaCharon-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Iosevka Charon';
+    src: url('./font/Iosevka_Charon/IosevkaCharon-Light.ttf');
+    font-weight: 300;
+}
+*{
+    font-family: 'Ioveska Charon';
+    font-weight: 400;
+}
