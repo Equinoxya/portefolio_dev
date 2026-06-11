@@ -8,7 +8,8 @@
                 <i class="devicon-linkedin-plain colored"></i>
             </a>
         </div>
-        <p class="credit">© 2026 Ophélie Bellissens — Fait avec Vue.js</p>
+        <p class="credit">© 2026 Ophélie Bellissens — Tous droits réservés</p>
+<p class="legal">Les données du formulaire de contact sont utilisées uniquement pour répondre à vos messages.</p>
     </footer>
 </template>
 
@@ -39,7 +40,11 @@
     text-decoration: none;
 }
 
-.credit {
+.credit{
+    font-size: 13px;
+    color: gray;
+}
+.legal{
     font-size: 13px;
     color: gray;
 }
