@@ -4,19 +4,24 @@
             <img src="/images/PhotoProfil.webp"  alt="Photo de profil">
             <h1>Ophélie Bellissens</h1>
             <h2>Conceptrice développeuse intégratrice IA</h2>
-            <p class="bio">Développeuse intégratrice IA en formation à Metz Numeric School, 
-                je conçois des applications avec une approche orientée logique métier et systèmes. 
-                À l'aise avec Python, JavaScript et les APIs REST, je m'investis sur des projets à forte 
-                valeur technique.</p>
-            <div class="badges">
-                <span v-for="badge in badges" :key="badge" class="badge">{{badge}}</span>
-            </div>
-            <button class="button-projets">
+            <p class="bio">Je suis développeuse et illustratrice, 
+                animée par une même conviction : les meilleurs projets naissent lorsque la technique rencontre 
+                la créativité. Que ce soit à travers une application, une intelligence artificielle ou une 
+                identité visuelle, j'aime transformer une idée en une réalisation concrète, élégante et utile. 
+                Mon objectif est de concevoir des expériences qui ont du sens, tout en continuant à apprendre 
+                et à repousser mes propres limites.</p>
+            <ul>
+                <li>💻 Développement web et logiciel</li>
+                <li>🤖 Intelligence artificielle & Machine Learning</li>
+                <li>🎮 Passionnée par l'univers du jeu vidéo</li> 
+                <li>🚀 Toujours prête à relever de nouveaux défis</li>
+            </ul>
+            <button class="button-projets" @click="allerA('#projets')">
                 Voir mes projets
             </button>
-            <button class="button-contact">
+            <button class="button-contact" @click="allerA('#contact')">
                 Me contacter
-            </button>
+            </button> 
             </div>
         <div class="hero-right">
             <span class="entete">
@@ -69,6 +74,9 @@
     icone : 'graduation-cap'
 }
 ]
+function allerA(ancre) {
+    window.location.href = ancre
+}
 </script>
 <style scoped>
     .hero{

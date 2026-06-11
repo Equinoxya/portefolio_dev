@@ -14,26 +14,21 @@
 </template>
 
 <script setup>
-import { faCode } from '@fortawesome/free-solid-svg-icons'
-import { library } from '@fortawesome/fontawesome-svg-core'
-
-library.add(faCode)
-const techs = [
-    { icone: 'python', nom: 'Python' },
-    { icone: 'vuejs', nom: 'Vue.js' },
-    { icone: 'nodejs', nom: 'Node.js' },
-    { icone: 'javascript', nom: 'JavaScript' },
-    { icone: 'html5', nom: 'HTML5' },
-    { icone: 'css3', nom: 'CSS3' },
-    { icone: 'git', nom: 'Git' },
-    { icone: 'mongodb', nom: 'MongoDB' },
-    { icone: 'mysql', nom: 'MySQL' },
-    { icone: 'github', nom: 'Github'},
-    { icone: 'npm', nom: 'NPM'},
-    { icone: 'postgresql', nom: 'PostgreSQL'},
-    { icone: 'vscode', nom: 'VS Code' }
-
-]
+    const techs = [
+        { icone: 'python', nom: 'Python' },
+        { icone: 'vuejs', nom: 'Vue.js' },
+        { icone: 'nodejs', nom: 'Node.js' },
+        { icone: 'javascript', nom: 'JavaScript' },
+        { icone: 'html5', nom: 'HTML5' },
+        { icone: 'css3', nom: 'CSS3' },
+        { icone: 'git', nom: 'Git' },
+        { icone: 'mongodb', nom: 'MongoDB' },
+        { icone: 'mysql', nom: 'MySQL' },
+        { icone: 'github', nom: 'Github'},
+        { icone: 'npm', nom: 'NPM'},
+        { icone: 'postgresql', nom: 'PostgreSQL'},
+        { icone: 'vscode', nom: 'VS Code' }
+    ]
 </script>
 
 <style scoped>
