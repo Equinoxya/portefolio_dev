@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection.vue"
 import Carrousel from "./components/Carrousel.vue";
 import ProjectsSection from "./components/ProjectsSection.vue";
 import Contact from "./components/Contact.vue";
+import Footer from "./components/Footer.vue";
 
 </script>
 
@@ -14,5 +15,6 @@ import Contact from "./components/Contact.vue";
         <Carrousel />
         <ProjectsSection />
         <Contact />
+        <Footer />
     </div>
 </template>
