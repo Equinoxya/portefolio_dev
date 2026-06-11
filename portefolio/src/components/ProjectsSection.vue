@@ -6,13 +6,18 @@
         </span>
         <span class="projets">
             <article class="project-card" v-for="projet in projets" :key="projet.nom">
-                <h3>{{ projet.nom }}</h3>
-                <a :href="projet.github" target="_blank"><img :src="projet.image" alt=""></a>
-                <p>{{ projet.description }}</p>
-                <div class="tags">
-                    <span class="tag" v-for="tag in projet.tags" :key="tag">{{ tag }}</span>
-                </div>
-            </article>
+                <img :src="projet.image" :alt="projet.nom">
+                <div class="card-body">
+                    <div class="card-titre">
+                        <h3>{{ projet.nom }}</h3>
+                        <a :href="projet.github" target="_blank">↗</a>
+                    </div>
+                    <p>{{ projet.description }}</p>
+        <div class="tags">
+            <span class="tag" v-for="tag in projet.tags" :key="tag">{{ tag }}</span>
+        </div>
+    </div>
+</article>
         </span>
     </section>
 </template>
@@ -37,7 +42,7 @@ const projets =[
     {
         nom: 'Nina Carducci, portefolio photographe',
         description: 'Portefolio pour la photographe Nina Carducci',
-        tags: ['HTML', 'CSS', 'Javascript', 'SEO', 'Optimisation'],
+        tags: ['Javascript', 'SEO', 'Optimisation'],
         github: 'https://equinoxya.github.io/OPP5-Nina/',
         image: './images/Nina.webp',
     },
@@ -65,16 +70,28 @@ img{
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
-.project-card{
+.project-card {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     min-width: 280px;
     width: 30%;
-    align-items: center;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 16px;
+    overflow: hidden;  /* ← important pour que l'image respecte le border-radius */
     box-shadow: 0px 4px 15px rgb(209, 208, 208);
-    border-radius: 10px;
-    padding: 1%,
+}
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card-titre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 p{
     text-align: center;
@@ -87,21 +104,16 @@ p{
     gap: 2%;
     justify-content: center;
 }
-.tags{
-    width: 100%;
+.tags {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 1%;
+    gap: 8px;
 }
-.tag{
-    display: flex;
-    border: 1px solid rgb(53, 53, 53);
-    background-color: rgb(255, 255, 255);
-    width: 40%;
-    margin: 1%;
+.tag {
+    background-color: rgb(240, 240, 240);
     border-radius: 20px;
-    align-items: center;
-    justify-content: center;
+    padding: 4px 12px;
+    font-size: 13px;
 }
 </style>
