@@ -82,10 +82,11 @@ function allerA(ancre) {
     .hero{
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-around;
         margin: 2%;
         margin-top: 5%;
+        align-items: center;
     }
     .hero-left{
         min-width: 300px;

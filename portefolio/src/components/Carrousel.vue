@@ -1,13 +1,18 @@
 <template>
-    <div class="tech-wrapper">
+    <div class="competences-wrapper" id="competences">
         <span class="titre-tech">
             <FontAwesomeIcon icon="code" />
             <h2>Compétences</h2>
         </span>
-        <div class="tech-grid">
-            <div v-for="tech in techs" :key="tech.icone" class="tech-item">
-                <i :class="`devicon-${tech.icone}-plain colored`"></i>
-                <span>{{ tech.nom }}</span>
+
+        <div class="scene">
+            <div class="roue">
+                <div v-for="(tech, index) in techs" :key="tech.icone" 
+                     class="tech-cercle"
+                     :style="{ transform: `rotateY(${index * (360 / techs.length)}deg) translateZ(500px)` }">
+                    <i :class="`devicon-${tech.icone}-plain colored`"></i>
+                    <span>{{ tech.nom }}</span>
+                </div>
             </div>
         </div>
     </div>
@@ -32,29 +37,20 @@
 </script>
 
 <style scoped>
-.tech-grid {
-    display: flex;
-    width: 75%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.tech-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 20%;
-    margin: 1%;
-}
-i {
-    font-size: 48px;
-}
-.tech-wrapper{
+.scene {
+    width: 100%;
+    perspective: 1000px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+}
+
+.roue {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: tourner 30s linear infinite;
 }
 .titre-tech{
     display: flex;
@@ -63,5 +59,21 @@ i {
     align-items: center;
     gap: 5%;
     margin: 5%;
+}
+.tech-cercle {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+@keyframes tourner {
+    from { transform: rotateY(0deg); }
+    to   { transform: rotateY(360deg); }
 }
 </style>
