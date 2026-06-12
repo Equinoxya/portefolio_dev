@@ -6,7 +6,8 @@
             </div>
             <h1 class="titre">Portfolio</h1>
         </span>
-        <ul class="links">
+        <button class="burger" @click="menuOuvert = !menuOuvert">☰</button>
+        <ul class="links" :class="{ ouvert: menuOuvert }">
             <li><a href="/#parcours">Parcours</a></li>
             <li><a href="/#competences">Compétences</a></li>
             <li><a href="/#projets">Projets</a></li>
@@ -14,7 +15,10 @@
         </ul>
     </nav>
 </template>
-
+<script setup>
+import { ref } from 'vue'
+const menuOuvert = ref(false)
+</script>
 <style scoped>
     .navbar{
     display: flex;
@@ -67,4 +71,38 @@
         text-decoration: none;
         color: black;
     }
+    /* Desktop — état par défaut */
+.burger {
+    display: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .plogo{
+        padding: 10px;
+    }
+    h1{
+        font-size: 12px;
+    }
+    .burger {
+        display: block;  /* burger visible */
+    }
+
+    .links {
+        display: none;       /* menu caché par défaut */
+        flex-direction: column;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+    }
+.logotitle{
+    justify-content: space-around;
+}
+    .links.ouvert {
+        display: flex;  /* menu visible quand ouvert */
+    }
+}
 </style>

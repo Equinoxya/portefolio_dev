@@ -53,8 +53,9 @@ function envoyer(){
 .formulaire-contact {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 12px;
-    width: 50%;
+    width: 100%;
 }
 
 input, textarea {
@@ -63,6 +64,7 @@ input, textarea {
     border-radius: 8px;
     font-size: 16px;
     outline: none;
+    width: 80%;
 }
 
 textarea {
