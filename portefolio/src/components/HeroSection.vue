@@ -19,7 +19,7 @@
             <button class="button-projets" @click="allerA('#projets')">
                 Voir mes projets
             </button>
-            <button class="button-contact" @click="allerA('#contact')">
+            <button class="button-contact" @click="allerA('#Contact')">
                 Me contacter
             </button> 
             </div>
