@@ -19,7 +19,7 @@
             <button class="button-projets" @click="allerA('#projets')">
                 Voir mes projets
             </button>
-            <button class="button-contact" @click="allerA('#Contact')">
+            <button class="button-contact" @click="allerA('#contact')">
                 Me contacter
             </button> 
             </div>
@@ -50,7 +50,6 @@
     </section>
 </template>
 <script setup>
-    const badges = ['React/Vue', 'Python', 'Node.js', 'HTML/CSS', 'SEO']
     const stages = [{
     titre: 'Stage developpeur web',
     entreprise: 'Exocoms Group',

@@ -2,7 +2,7 @@
     <nav class="navbar">
         <span class="logotitle">
             <div class="logo">
-                <p class="plogo">P</p>
+                <p class="plogo">OB</p>
             </div>
             <h1 class="titre">Portfolio</h1>
         </span>
