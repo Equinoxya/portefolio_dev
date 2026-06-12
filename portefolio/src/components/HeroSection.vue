@@ -23,7 +23,7 @@
                 Me contacter
             </button> 
             </div>
-        <div class="hero-right">
+        <div class="hero-right" id="parcours">
             <span class="entete">
                 <FontAwesomeIcon icon="graduation-cap" />
                 <h2>Formations & stages</h2>
