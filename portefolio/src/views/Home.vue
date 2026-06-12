@@ -4,6 +4,7 @@ import Carrousel from "../components/Carrousel.vue";
 import ProjectsSection from "../components/ProjectsSection.vue";
 import Contact from "../components/Contact.vue";
 import Footer from "../components/Footer.vue";
+import ScrollTop from "@/components/ScrollTop.vue";
 
 </script>
 
@@ -11,6 +12,7 @@ import Footer from "../components/Footer.vue";
     <div>
         <HeroSection />
         <Carrousel />
+        <ScrollTop/>
         <ProjectsSection />
         <Contact />
         <Footer />
