@@ -7,10 +7,10 @@
             <h1 class="titre">Portfolio</h1>
         </span>
         <ul class="links">
-            <li><a href="#about">A propos</a></li>
-            <li><a href="#parcours">Parcours</a></li>
-            <li><a href="#projets">Projets</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="/#about">À propos</a></li>
+            <li><a href="/#parcours">Parcours</a></li>
+            <li><a href="/#projets">Projets</a></li>
+            <li><a href="/#contact">Contact</a></li>
         </ul>
     </nav>
 </template>

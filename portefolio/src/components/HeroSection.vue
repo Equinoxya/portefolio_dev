@@ -1,5 +1,5 @@
 <template>
-    <section class="hero">
+    <section class="hero" id="about">
         <div class="hero-left">
             <img src="/images/PhotoProfil.webp"  alt="Photo de profil">
             <h1>Ophélie Bellissens</h1>

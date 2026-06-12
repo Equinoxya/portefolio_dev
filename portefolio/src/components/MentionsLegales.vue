@@ -17,3 +17,13 @@
         <p>Le formulaire de contact collecte uniquement votre nom, email et message dans le but de répondre à votre demande. Ces données ne sont pas stockées et ne sont pas transmises à des tiers, à l'exception du service EmailJS utilisé pour l'acheminement des messages.</p>
     </section>
 </template>
+<style scoped>
+    .mentions{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10%;
+        text-align: center;
+        
+    }
+</style>

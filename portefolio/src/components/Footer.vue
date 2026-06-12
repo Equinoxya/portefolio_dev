@@ -9,6 +9,7 @@
             </a>
         </div>
         <p class="credit">© 2026 Ophélie Bellissens — Tous droits réservés</p>
+        <RouterLink to="/mentions-legales">Mentions légales</RouterLink>
 <p class="legal">Les données du formulaire de contact sont utilisées uniquement pour répondre à vos messages.</p>
     </footer>
 </template>
