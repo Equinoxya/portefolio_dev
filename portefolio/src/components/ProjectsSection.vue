@@ -6,7 +6,7 @@
         </span>
         <span class="projets">
             <article class="project-card" v-for="projet in projets" :key="projet.nom">
-                <img :src="projet.image" :alt="projet.nom">
+                <img :src="projet.image" :alt="projet.nom" loading="lazy">
                 <div class="card-body">
                     <div class="card-titre">
                         <h3>{{ projet.nom }}</h3>

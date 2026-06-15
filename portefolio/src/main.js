@@ -9,6 +9,25 @@ import { faGraduationCap, faBriefcase, faCode, faFolderOpen } from '@fortawesome
 library.add(faGraduationCap, faBriefcase, faCode, faFolderOpen)
 
 const app = createApp(App)
+
 app.use(router)
 app.component('FontAwesomeIcon', FontAwesomeIcon)
-app.mount('#app')
+app.directive('appear', {
+    mounted(el) {
+        el.style.opacity = '0'
+        el.style.transform = 'translateY(30px)'
+        el.style.transition = 'opacity 0.6s ease, transform 0.9s ease'
+
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                el.style.opacity = '1'
+                el.style.transform = 'translateY(0)'
+                observer.disconnect()
+            }
+        }, { threshold: 0.1 })
+
+        observer.observe(el)
+    }
+})
+
+app.mount('#app')  // ← toujours en dernier !

@@ -1,7 +1,7 @@
 <template>
     <section class="hero" id="about">
         <div class="hero-left">
-            <img src="/images/PhotoProfil.webp"  alt="Photo de profil">
+            <img src="/images/PhotoProfil.webp"  alt="Photo de profil" loading="lazy">
             <h1>Ophélie Bellissens</h1>
             <h2>Conceptrice développeuse intégratrice IA</h2>
             <p class="bio">Je suis développeuse et illustratrice, 

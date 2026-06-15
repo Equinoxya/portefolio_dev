@@ -10,11 +10,11 @@ import ScrollTop from "@/components/ScrollTop.vue";
 
 <template>
     <div>
-        <HeroSection />
-        <Carrousel />
         <ScrollTop/>
-        <ProjectsSection />
-        <Contact />
+        <HeroSection v-appear />
+        <Carrousel v-appear />
+        <ProjectsSection v-appear />
+        <Contact v-appear />
         <Footer />
     </div>
 </template>

@@ -74,6 +74,12 @@ const menuOuvert = ref(false)
     /* Desktop — état par défaut */
 .burger {
     display: none;
+    border-radius: 100%;
+    border: 1px solid gray;
+    background: none;
+    width: 50px;
+    height: 50px;
+
 }
 
 /* Mobile */
@@ -104,5 +110,8 @@ const menuOuvert = ref(false)
     .links.ouvert {
         display: flex;  /* menu visible quand ouvert */
     }
+}
+.navbar{
+    justify-content: space-around;
 }
 </style>
