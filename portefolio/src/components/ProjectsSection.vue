@@ -46,6 +46,13 @@ const projets =[
         github: 'https://equinoxya.github.io/OPP5-Nina/',
         image: './images/Nina.webp',
     },
+    {
+        nom: 'Portfolio - Equipouet',
+        description: 'Portfolio pour l\'illustratrice Equipouet',
+        tags: ['HTML', 'CSS', 'JS',],
+        github: 'https://equipouet.netlify.app/',
+        image: './images/Equipouet.webp',
+    },
 ]
 </script>
 <style scoped>
@@ -80,6 +87,7 @@ img{
     border-radius: 16px;
     overflow: hidden;  /* ← important pour que l'image respecte le border-radius */
     box-shadow: var(--shadow);
+    margin-bottom: 10px;
 }
 .card-body {
     padding: 20px;
