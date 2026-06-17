@@ -117,4 +117,9 @@ p{
     padding: 4px 12px;
     font-size: 13px;
 }
+@media (max-width: 768px){
+    .projets{
+        gap:10px;
+    }
+}
 </style>
