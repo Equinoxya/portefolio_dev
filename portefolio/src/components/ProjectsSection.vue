@@ -76,10 +76,10 @@ img{
     justify-content: flex-start;
     min-width: 280px;
     width: 30%;
-    border: 1px solid rgb(230, 230, 230);
+    border: 1px solid var(--border);
     border-radius: 16px;
     overflow: hidden;  /* ← important pour que l'image respecte le border-radius */
-    box-shadow: 0px 4px 15px rgb(209, 208, 208);
+    box-shadow: var(--shadow);
 }
 .card-body {
     padding: 20px;
@@ -111,6 +111,7 @@ p{
     gap: 8px;
 }
 .tag {
+    color: black;
     background-color: rgb(240, 240, 240);
     border-radius: 20px;
     padding: 4px 12px;

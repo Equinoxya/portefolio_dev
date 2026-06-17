@@ -154,7 +154,7 @@ function allerA(ancre) {
     .button-contact {
         background-color: white;
         color: black;
-        border: 1px solid black;
+        border: 1px solid var(--border);
         border-radius: 20px;
         padding: 2%;
         width: 40%;
@@ -177,7 +177,7 @@ function allerA(ancre) {
         gap: 10px;
     }
     .formation-card{
-        box-shadow: -1px 1px 10px #c5c5c5;
+        box-shadow: var(--shadow);
         width: 95%;
         border-radius: 20px;
         padding: 2%;
@@ -190,6 +190,7 @@ function allerA(ancre) {
         padding: 2%;
         background-color: #e9e9e9;
         border-radius: 100%;
+        color: black;
     }
     .desc-card{
             display: flex;

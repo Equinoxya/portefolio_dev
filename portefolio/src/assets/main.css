@@ -23,15 +23,18 @@ h1, h2, h3{
 :root {
     --bg: white;
     --texte: black;
-    /* ajoute les couleurs dont tu as besoin */
+    --border: rgb(209, 208, 208);
+    --shadow: 0px 4px 15px rgba(209, 208, 208);
 }
 
 .dark {
     --bg: #0d0d0d;
     --texte: #f0f0f0;
-    /* les mêmes variables mais en sombre */
+    --border: #444;
+    --shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 body {
     background-color: var(--bg);
     color: var(--texte);
+    text-decoration: none;
 }

@@ -39,8 +39,8 @@ const menuOuvert = ref(false)
     width: 100%;
     height: 10vh;
     margin: 0;
-    border-bottom: 1px solid rgb(209, 208, 208);
-    box-shadow: 0px 4px 10px rgb(209, 208, 208);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
     }
     .logotitle{
         display: flex;
