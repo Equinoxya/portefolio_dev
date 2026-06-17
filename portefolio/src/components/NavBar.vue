@@ -104,7 +104,9 @@ const menuOuvert = ref(false)
         cursor: pointer;
         font-size: 20px;
         padding: 8px;
-        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
         transition: background-color 0.3s ease;
     }
 
