@@ -9,10 +9,10 @@
         <span class="span_nav">
             <button class="burger" @click="menuOuvert = !menuOuvert">☰</button>
             <ul class="links" :class="{ ouvert: menuOuvert }">
-                <li><a href="/#parcours">Parcours</a></li>
-                <li><a href="/#competences">Compétences</a></li>
-                <li><a href="/#projets">Projets</a></li>
-                <li><a href="/#contact">Contact</a></li>
+                <li><a href="/#parcours" aria-label="Parcours">Parcours</a></li>
+                <li><a href="/#competences" aria-label="Compétences">Compétences</a></li>
+                <li><a href="/#projets" aria-label="Projets">Projets</a></li>
+                <li><a href="/#contact" aria-label="Contact">Contact</a></li>
             </ul>
             <button @click="toggleDark" class="toggle-dark">
                 {{ darkMode ? '☀️' : '🌙' }}
