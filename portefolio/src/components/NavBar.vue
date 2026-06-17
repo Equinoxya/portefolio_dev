@@ -6,17 +6,29 @@
             </div>
             <h1 class="titre">Portfolio</h1>
         </span>
-        <button class="burger" @click="menuOuvert = !menuOuvert">☰</button>
-        <ul class="links" :class="{ ouvert: menuOuvert }">
-            <li><a href="/#parcours">Parcours</a></li>
-            <li><a href="/#competences">Compétences</a></li>
-            <li><a href="/#projets">Projets</a></li>
-            <li><a href="/#contact">Contact</a></li>
-        </ul>
+        <span class="span_nav">
+            <button class="burger" @click="menuOuvert = !menuOuvert">☰</button>
+            <ul class="links" :class="{ ouvert: menuOuvert }">
+                <li><a href="/#parcours">Parcours</a></li>
+                <li><a href="/#competences">Compétences</a></li>
+                <li><a href="/#projets">Projets</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+            <button @click="toggleDark" class="toggle-dark">
+                {{ darkMode ? '☀️' : '🌙' }}
+            </button>
+        </span>
     </nav>
 </template>
 <script setup>
 import { ref } from 'vue'
+
+const darkMode = ref(false)
+
+function toggleDark() {
+    darkMode.value = !darkMode.value
+    document.documentElement.classList.toggle('dark')
+}
 const menuOuvert = ref(false)
 </script>
 <style scoped>
@@ -55,6 +67,11 @@ const menuOuvert = ref(false)
     .titre{
         font-size: 40px;
     }
+    .span_nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
     ul{
         display: flex;
         justify-content: flex-end;
@@ -67,25 +84,38 @@ const menuOuvert = ref(false)
         list-style: none;
         font-size: 20px;
     }
-    a{
-        text-decoration: none;
-        color: black;
-    }
-    /* Desktop — état par défaut */
-.burger {
-    display: none;
-    border-radius: 100%;
-    border: 1px solid gray;
-    background: none;
-    width: 50px;
-    height: 50px;
-
+    a {
+    text-decoration: none;
+    color: var(--texte);  /* ← au lieu de color: black */
 }
+    /* Desktop — état par défaut */
+    .burger {
+        display: none;
+        border-radius: 100%;
+        border: 1px solid gray;
+        background: none;
+        width: 50px;
+        height: 50px;
+
+    }
+    .toggle-dark {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        padding: 8px;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+    }
+
+    .toggle-dark:hover {
+        background-color: rgb(240, 240, 240);
+    }
 
 /* Mobile */
 @media (max-width: 768px) {
     .plogo{
-        padding: 10px;
+        display: none;
     }
     h1{
         font-size: 12px;
@@ -93,7 +123,6 @@ const menuOuvert = ref(false)
     .burger {
         display: block;  /* burger visible */
     }
-
     .links {
         display: none;       /* menu caché par défaut */
         flex-direction: column;
@@ -104,14 +133,13 @@ const menuOuvert = ref(false)
         background-color: white;
         padding: 20px;
     }
-.logotitle{
-    justify-content: space-around;
-}
-    .links.ouvert {
-        display: flex;  /* menu visible quand ouvert */
+    .logotitle{
+        justify-content: space-around;
     }
-}
-.navbar{
-    justify-content: space-around;
-}
+        .links.ouvert {
+            display: flex;  /* menu visible quand ouvert */
+        }
+    .navbar{
+        justify-content: space-around;
+    }}
 </style>

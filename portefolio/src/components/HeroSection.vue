@@ -3,7 +3,7 @@
         <div class="hero-left">
             <img src="/images/PhotoProfil.webp"  alt="Photo de profil" loading="lazy">
             <h1>Ophélie Bellissens</h1>
-            <h2>Conceptrice développeuse intégratrice IA</h2>
+            <h2>{{ texteAffiche }}<span class="curseur">|</span></h2>
             <p class="bio">Je suis développeuse et illustratrice, 
                 animée par une même conviction : les meilleurs projets naissent lorsque la technique rencontre 
                 la créativité. Que ce soit à travers une application, une intelligence artificielle ou une 
@@ -49,7 +49,21 @@
         </div>
     </section>
 </template>
+
 <script setup>
+import { ref, onMounted } from 'vue'
+
+const texteAffiche = ref('')
+const texteComplet = 'Conceptrice développeuse intégratrice IA'
+
+onMounted(() => {
+    let i = 0
+    const interval = setInterval(() => {
+        texteAffiche.value += texteComplet[i]
+        i++
+        if (i === texteComplet.length) clearInterval(interval)
+    }, 50)
+})
     const stages = [{
     titre: 'Stage developpeur web',
     entreprise: 'Exocoms Group',
@@ -77,6 +91,7 @@ function allerA(ancre) {
     window.location.href = ancre
 }
 </script>
+
 <style scoped>
     .hero{
         display: flex;
@@ -180,5 +195,13 @@ function allerA(ancre) {
             display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+.curseur {
+    animation: clignoter 0.8s infinite;
+}
+
+@keyframes clignoter {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
 }
 </style>
