@@ -1,5 +1,27 @@
 <template>
     <section class="hero" id="about">
+        <vue-particles
+    :key="particlesKey"
+    id="tsparticles"
+    :particlesLoaded="particlesLoaded"
+    :options="{
+        background: { color: { value: 'transparent' } },
+        particles: {
+            number: { value: 20 },
+            color: { value: couleurParticules },
+links: {
+    enable: true,
+    color: couleurParticules,
+                opacity: 1,
+                distance: 150,
+            },
+            move: { enable: true, speed: 1.5 },
+            size: { value: { min: 1, max: 10 } },
+            opacity: { value: 1 },
+            shape: { type: 'star' }
+        }
+    }"
+/>
         <div class="hero-left">
             <img src="/images/PhotoProfil.webp"  alt="Photo de profil" loading="lazy">
             <h1>Ophélie Bellissens</h1>
@@ -56,6 +78,22 @@ import { ref, onMounted } from 'vue'
 const texteAffiche = ref('')
 const texteComplet = 'Conceptrice développeuse intégratrice IA'
 
+// ← ces deux variables manquent !
+const couleurParticules = ref('#000000')
+const particlesKey = ref(0)
+
+const observer = new MutationObserver(() => {
+    couleurParticules.value = document.documentElement.classList.contains('dark')
+        ? '#ffffff'
+        : '#000000'
+    particlesKey.value++
+})
+observer.observe(document.documentElement, { attributes: true })
+
+async function particlesLoaded(container) {
+    console.log('Particles loaded', container)
+}
+
 onMounted(() => {
     let i = 0
     const interval = setInterval(() => {
@@ -93,7 +131,16 @@ function allerA(ancre) {
 </script>
 
 <style scoped>
+    #tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
     .hero{
+        position: relative;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;

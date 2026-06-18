@@ -5,11 +5,18 @@ import router from './router'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faGraduationCap, faBriefcase, faCode, faFolderOpen } from '@fortawesome/free-solid-svg-icons'
+import Particles from "@tsparticles/vue3"
+import { loadSlim } from "@tsparticles/slim"
+
 
 library.add(faGraduationCap, faBriefcase, faCode, faFolderOpen)
 
 const app = createApp(App)
-
+app.use(Particles, {
+    init: async engine => {
+        await loadSlim(engine)
+    }
+})
 app.use(router)
 app.component('FontAwesomeIcon', FontAwesomeIcon)
 app.directive('appear', {

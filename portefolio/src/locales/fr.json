@@ -1,0 +1,19 @@
+{
+    "navbar": {
+        "apropos": "À propos",
+        "parcours": "Parcours",
+        "projets": "Projets",
+        "contact": "Contact"
+    },
+    "hero": {
+        "titre": "Conceptrice développeuse intégratrice IA",
+        "bio":"Je suis développeuse et illustratrice, animée par une même conviction : les meilleurs projets naissent lorsque la technique rencontre la créativité. Que ce soit à travers une application, une intelligence artificielle ou une identité visuelle, j'aime transformer une idée en une réalisation concrète, élégante et utile. Mon objectif est de concevoir des expériences qui ont du sens, tout en continuant à apprendre et à repousser mes propres limites.",
+        "li1": "💻 Développement web et logiciel",
+        "li2": "🤖 Intelligence artificielle & Machine Learning",
+        "li3": "🎮 Passionnée par l'univers du jeu vidéo",
+        "li4":"🚀 Toujours prête à relever de nouveaux défis",
+        "button-projets" : "Voir mes projets",
+        "button-contact": "Me contacter",
+        "formsta" : "Formations et Stages"
+    }
+}
