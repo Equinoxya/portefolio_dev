@@ -39,7 +39,6 @@
 <style scoped>
 .scene {
     width: 100%;
-    perspective: 1000px;
     display: flex;
     align-items: center;
     justify-content: center;

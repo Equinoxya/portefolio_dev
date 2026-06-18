@@ -79,6 +79,7 @@ const menuOuvert = ref(false)
         width: 50%;
         align-items: center;
         margin-right: 2%;
+        z-index: 1;
     }
     li{
         list-style: none;
